@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Waqas",
+    "balance": 4500,
+    "pin": 1234,
+    "accountNumber": 3456
+  },
+  {
+    "name": "Aisha",
+    "balance": 3200,
+    "pin": 5678,
+    "accountNumber": 7890
+  },
+  {
+    "name": "Salman",
+    "balance": 1500,
+    "pin": 1111,
+    "accountNumber": 1122
+  },
+  {
+    "name": "Faris",
+    "balance": 9800,
+    "pin": 4321,
+    "accountNumber": 3344
+  }
+]

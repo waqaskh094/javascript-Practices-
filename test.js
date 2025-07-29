@@ -42,7 +42,7 @@ console.log(`
 let option = prompt("Enter your option Number: ");
 
 option = Number(option);
-
+while(true){
 switch(option){
     case 1:
         createAccount(accounts);
@@ -59,7 +59,7 @@ switch(option){
     case 4:
         console.log("Exit");
         process.exit();
-}
+}}
 
 
 
@@ -112,19 +112,23 @@ function accountLogin(accounts){
     const pin = Number(prompt("Enter you pin Number: "));
     accounts.forEach(account => {
         if(account.accountNumber == accountNumber && account.pin == pin)
-            accountProtal(accountNumber);
+            accountProtal(accountNumber, accounts);
 });
 console.log(accounts);
 }
 
-function accountProtal(accountNumber){
+function accountProtal(accountNumber, accounts){
     console.log("Successfully logged IN account number: " + accountNumber);
     console.log("Select form following options:", "\n1. Account Info", "\n2. Amount Depoist", "\n3.Amount Withdraw", "\n4.Amount Transfer", "\n5.Exit");
     const option = prompt("Enter Your Option: ");
 
     switch(option){
         case 1:
-            console.log("info");
+            const account = accounts.find(account => accountNumber === accountNumber);
+            console.log("\nAccount Number: " + account.accountNumber,
+                "\n Account Holder Name: " + account.name,
+                "\n Account Balance: " + account.balance,
+            )
             break;
 
         case 2:
